@@ -1,0 +1,14 @@
+# Stage 2: Vision & Differential Diagnostics Configuration
+
+model:
+  backbone: "nvidia/mit-b4"
+  num_classes: 4  # Background, Granulation, Slough, Necrotic
+  img_size: [512, 512]
+
+lab_color_space:
+  erythema_index_method: "log_ratio"  # log10(red) - log10(green)
+
+training:
+  batch_size: 8
+  learning_rate: 0.0001
+  epochs: 50
